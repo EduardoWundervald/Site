@@ -3,39 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Portfólio</title>
+    <title>Meu Perfil</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            text-align: center;
             background-color: #f4f4f4;
+            color: #333;
+            text-align: center;
             margin: 0;
-            padding: 50px;
+            padding: 20px;
         }
         .container {
+            max-width: 400px;
+            margin: auto;
             background: white;
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            display: inline-block;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-bottom: 15px;
         }
         h1 {
-            color: #333;
+            font-size: 22px;
+            margin: 10px 0;
         }
         p {
+            font-size: 14px;
             color: #666;
         }
-        .btn {
-            display: inline-block;
+        .links {
             margin-top: 20px;
-            padding: 10px 20px;
-            font-size: 18px;
-            color: white;
-            background-color: #0073b1;
-            text-decoration: none;
-            border-radius: 5px;
         }
-        .btn:hover {
+        .link {
+            display: block;
+            background-color: #0073b1;
+            color: white;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .link:hover {
             background-color: #005582;
         }
     </style>
@@ -43,9 +58,14 @@
 <body>
 
     <div class="container">
-        <h1>Olá, sou EduardoWundervald</h1>
-        <p>Programador apaixonado por tecnologia. Confira meus projetos no GitHub!</p>
-        <a href="https://github.com/EduardoWundervald" class="btn" target="_blank">Acessar GitHub</a>
+        <img src="avatar.png" alt="Avatar">
+        <h1>Eduardo Wundervald</h1>
+        <p>Programador apaixonado por tecnologia. Explore meus projetos e redes abaixo:</p>
+
+        <div class="links">
+            <a href="https://github.com/EduardoWundervald" class="link" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/eduardowundervald/" class="link" target="_blank">LinkedIn</a>
+        </div>
     </div>
 
 </body>
