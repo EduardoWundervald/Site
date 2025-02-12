@@ -9,30 +9,48 @@
             font-family: Arial, sans-serif;
             background-color: #d8d5cb;
             color: #333;
-            text-align: center;
             margin: 0;
-            padding: 20px;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow-y: auto; /* Permite rolagem */
         }
         .container {
-            max-width: 400px;
-            margin: auto;
+            display: flex;
+            width: 80%;
+            max-width: 900px;
             background: white;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            flex-wrap: wrap;
+        }
+        .left {
+            flex: 1;
+            padding: 20px;
+            min-width: 250px;
+            text-align: justify; /* Alinha o texto do "Sobre Mim" */
+        }
+        .right {
+            flex: 1;
+            padding: 20px;
+            text-align: center;
+            min-width: 250px;
         }
         img {
-            width: 120px;
-            height: 120px;
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
             margin-bottom: 15px;
         }
         h1 {
-            font-size: 22px;
+            font-size: 24px;
             margin: 10px 0;
         }
         p {
-            font-size: 14px;
+            font-size: 16px;
             color: #666;
         }
         .links {
@@ -53,23 +71,39 @@
         .link:hover {
             background-color: #005582;
         }
+        @media (max-width: 600px) {
+            .container {
+                flex-direction: column;
+                text-align: center;
+            }
+            .left {
+                text-align: left; /* Em telas pequenas, mantém alinhamento natural */
+            }
+        }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <img src="avatar.png" alt="Avatar">
-        <h1>Eduardo Wundervald</h1>
-        <p>Apaixonado por tecnologia.</p>
-        <p>Desenvolvedor de testes em JEST para projetos JavaScript e autodidata em Flutter, HTML e CSS.</p>
-        <p>Explore meus projetos e redes abaixo:</p>
-        <div class="links">
-            <a href="https://github.com/EduardoWundervald" class="link" target="_blank">GitHub</a>
-            <a href="https://www.linkedin.com/in/eduardowundervald/" class="link" target="_blank">LinkedIn</a>
-            <a href="https://www.instagram.com/eduardo_vendaval/" class="link" target="_blank">Instagram</a>
+        <!-- Coluna da esquerda -->
+        <div class="left">
+            <h1>Sobre Mim</h1>
+            <p>Apaixonado por tecnologia.</p>
+            <p>Desenvolvedor de testes em JEST para projetos JavaScript e autodidata em Flutter, HTML e CSS.</p>
+            <p>Explore meus projetos e mídias:</p>
+        </div>
+
+        <!-- Coluna da direita -->
+        <div class="right">
+            <img src="avatar.png" alt="Avatar">
+            <h1>Eduardo Wundervald</h1>
+            <div class="links">
+                <a href="https://github.com/EduardoWundervald" class="link" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/eduardowundervald/" class="link" target="_blank">LinkedIn</a>
+                <a href="https://www.instagram.com/eduardo_vendaval/" class="link" target="_blank">Instagram</a>
+            </div>
         </div>
     </div>
 
 </body>
 </html>
-<!-- w -->
