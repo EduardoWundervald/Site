@@ -33,17 +33,17 @@
             min-width: 250px;
         }
         .left {
-            text-align: justify;
+            text-align: center;
         }
         .right {
-            text-align: center;
+            text-align: justify;
         }
         .avatar {
             height: 120px;
             width: 120px;
             border-radius: 50%;
             margin-bottom: 15px;
-            margin-top: 40px;
+            margin-top: 60px;
         }
         .logo {
         width: 250px;
@@ -94,11 +94,12 @@
                 text-align: center;
             }
             .left {
-                text-align: justify;
-                order: 2;
+                text-align: center;
+                order: 1;
             }
             .right {
-                order: 1;
+                text-align: justify;
+                order: 2;
             }
             .avatar {
                 height: 100px;
@@ -114,7 +115,7 @@
 
     <div class="container">
         <!-- Coluna da direita (mobile: fica no topo) -->
-        <div class="right">
+        <div class="left">
             <img src="avatar.png" alt="Avatar" class="avatar">
             <h1>Eduardo Wundervald</h1>
             <div class="links">
@@ -125,7 +126,7 @@
         </div>
 
         <!-- Coluna da esquerda (mobile: fica abaixo) -->
-        <div class="left">
+        <div class="right">
             <h1>Sobre Mim</h1>
             <p>Apaixonado por tecnologia.</p>
             <p>Desenvolvedor de testes em JEST para projetos JavaScript e autodidata em Flutter, HTML e CSS.</p>
