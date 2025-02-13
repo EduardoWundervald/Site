@@ -14,54 +14,54 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            overflow-y: auto; /* Permite rolagem */
+            min-height: 100vh;
+            overflow-y: auto;
         }
         .container {
             display: flex;
-            width: 80%;
+            flex-wrap: wrap;
+            width: 90%;
             max-width: 900px;
             background: white;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            flex-wrap: wrap;
+        }
+        .left, .right {
+            flex: 1;
+            padding: 20px;
+            min-width: 250px;
         }
         .left {
-            flex: 1;
-            padding: 20px;
-            min-width: 250px;
-            text-align: justify; /* Alinha o texto do "Sobre Mim" */
+            text-align: justify;
         }
         .right {
-            flex: 1;
-            padding: 20px;
             text-align: center;
-            min-width: 250px;
         }
         .avatar {
-            height: 150px;
-            width: 150px;
+            height: 120px;
+            width: 120px;
             border-radius: 50%;
             margin-bottom: 15px;
-            margin-top: 30px;
         }
         .logo {
-            width: 300px;
-            height: 300px;
-            margin-left: 30px;
+        width: 250px;
+        height: auto;
+        margin: 1px auto; /* Centraliza horizontalmente */
+        display: block; /* Garante que o elemento respeite o margin auto */
+        max-width: 100%;
         }
+
         h1 {
             font-size: 24px;
             margin: 10px 0;
-            margin-top: 0.1px;
         }
         p {
             font-size: 16px;
             color: #666;
         }
         .links {
-            margin-top: 40px;
+            margin-top: 20px;
         }
         .link {
             display: block;
@@ -78,13 +78,26 @@
         .link:hover {
             background-color: #005582;
         }
-        @media (max-width: 600px) {
+        
+        /* Responsividade */
+        @media (max-width: 768px) {
             .container {
                 flex-direction: column;
                 text-align: center;
             }
             .left {
-                text-align: left; /* Em telas pequenas, mantém alinhamento natural */
+                text-align: justify;
+                order: 2;
+            }
+            .right {
+                order: 1;
+            }
+            .avatar {
+                height: 100px;
+                width: 100px;
+            }
+            .logo {
+                width: 150px;
             }
         }
     </style>
@@ -92,20 +105,9 @@
 <body>
 
     <div class="container">
-        <!-- Coluna da esquerda -->
-        <div class="left">
-            <h1>Sobre Mim</h1>
-            <p>Apaixonado por tecnologia.</p>
-            <p>Desenvolvedor de testes em JEST para projetos JavaScript e autodidata em Flutter, HTML e CSS.</p>
-            <p>Quality Assurance para conformidade das especifiações do cliente.</p>
-            <p>Explore meus projetos e mídias:</p>
-            <img src="Wundervald.png" alt="Wundervald" class="logo">
-                
-        </div>
-
-        <!-- Coluna da direita -->
+        <!-- Coluna da direita (mobile: fica no topo) -->
         <div class="right">
-            <img src="avatar.png" alt="Avatar" class= "avatar">
+            <img src="avatar.png" alt="Avatar" class="avatar">
             <h1>Eduardo Wundervald</h1>
             <div class="links">
                 <a href="https://github.com/EduardoWundervald" class="link" target="_blank">GitHub</a>
@@ -113,8 +115,17 @@
                 <a href="https://www.instagram.com/eduardo_vendaval/" class="link" target="_blank">Instagram</a>
             </div>
         </div>
+
+        <!-- Coluna da esquerda (mobile: fica abaixo) -->
+        <div class="left">
+            <h1>Sobre Mim</h1>
+            <p>Apaixonado por tecnologia.</p>
+            <p>Desenvolvedor de testes em JEST para projetos JavaScript e autodidata em Flutter, HTML e CSS.</p>
+            <p>Quality Assurance para conformidade das especificações do cliente.</p>
+            <p>Explore meus projetos e mídias:</p>
+            <img src="Wundervald.png" alt="Wundervald" class="logo">
+        </div>
     </div>
 
 </body>
 </html>
-<!-- Teste -->
