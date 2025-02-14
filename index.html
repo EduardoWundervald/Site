@@ -18,19 +18,29 @@
             overflow-y: auto;
         }
         .container {
-            display: flex;
-            flex-wrap: wrap;
+            flex-wrap: flex;
             width: 90%;
             max-width: 900px;
-            background: white;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #40535e;
         }
-        .left, .right {
+        .container .left {
             flex: 1;
             padding: 20px;
             min-width: 250px;
+            background: white;
+            border-radius: 30px;
+            margin-bottom: 20px;
+        }
+        .container .right {
+            flex: 1;
+            padding: 20px;
+            min-width: 250px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 30px;
+            background-color: white;
         }
         .left {
             text-align: center;
@@ -43,7 +53,6 @@
             width: 120px;
             border-radius: 50%;
             margin-bottom: 15px;
-            margin-top: 60px;
         }
         .logo {
         width: 250px;
@@ -51,6 +60,21 @@
         margin: 1px auto; /* Centraliza horizontalmente */
         display: block; /* Garante que o elemento respeite o margin auto */
         max-width: 100%;
+        }
+        .github {
+            width: 20px;
+            height: auto;
+            margin-right: 10px;
+        }
+        .instagram {
+            width: 20px;
+            height: auto;
+            margin-right: 10px;
+        }
+        .linkedin {
+            width: 20px;
+            height: auto;
+            margin-right: 10px;
         }
 
         h1 {
@@ -61,24 +85,34 @@
             font-size: 16px;
             color: #666;
         }
+        b {
+            font-size: 16px;
+        }	
         .links {
             margin-top: 20px;
         }
         .link {
-            display: block;
             background-color: #40535e;
             color: white;
-            padding: 10px;
-            margin: 10px 0;
-            border-radius: 5px;
+            padding: 15px;
+            margin: 1px auto;
+            border-radius: 10px;
             text-decoration: none;
             font-size: 16px;
             font-weight: bold;
             transition: 0.3s;
+            display: block;
+            max-width: 400px;
+            margin-bottom: 5px;
+        }
+        .lowText {
+            text-align: center;
+            margin-top: 20px;
+            color: #ffffff;
+            font-size: 12px;
         }
 
-        .link :active 
-            {
+        .link :active {
                 background-color: #f87a05;
             }
         
@@ -109,6 +143,7 @@
                 width: 150px;
             }
         }
+        
     </style>
 </head>
 <body>
@@ -119,9 +154,9 @@
             <img src="avatar.png" alt="Avatar" class="avatar">
             <h1>Eduardo Wundervald</h1>
             <div class="links">
-                <a href="https://github.com/EduardoWundervald" class="link" target="_blank">GitHub</a>
-                <a href="https://www.linkedin.com/in/eduardowundervald/" class="link" target="_blank">LinkedIn</a>
-                <a href="https://www.instagram.com/eduardo_vendaval/" class="link" target="_blank">Instagram</a>
+                <a href="https://github.com/EduardoWundervald" class="link" target="_blank"><img src="github.png" alt="github" class="github"><b>GitHub</b></a>
+                <a href="https://www.linkedin.com/in/eduardowundervald/" class="link" target="_blank"><img src="linkedin.png" alt="linkedin" class="linkedin">LinkedIn</a>
+                <a href="https://www.instagram.com/eduardo_vendaval/" class="link" target="_blank"><img src="instagram.png" alt="instagram" class="instagram">Instagram</a>
             </div>
         </div>
 
@@ -129,10 +164,12 @@
         <div class="right">
             <h1>Sobre Mim</h1>
             <p>Apaixonado por tecnologia.</p>
-            <p>Desenvolvedor de testes em JEST para projetos JavaScript e autodidata em Flutter, HTML e CSS.</p>
-            <p>Quality Assurance para conformidade das especificações do cliente.</p>
+            <p>Desenvolvedor de testes em JEST para projetos JavaScript e autodidata em Flutter, HTML e CSS. Quality Assurance para conformidade das especificações do cliente.</p>
             <p>Explore meus projetos e mídias:</p>
             <img src="Wundervald.png" alt="Wundervald" class="logo">
+        </div>
+        <div class="lowText">
+            <lowText>Projeto em desenvolvimento, possivelmente os links não funcionarão 100% do tempo. Agradeço a compreensão e o interesse!</lowText>
         </div>
     </div>
 
